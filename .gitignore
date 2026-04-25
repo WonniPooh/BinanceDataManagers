@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Database files (large, binary)
+*.db
+
+# Logs
+logs/
+*.log
+
+# Tests
+.pytest_cache/
+htmlcov/
+.coverage
+
+# IDE
+.vscode/
+.idea/
+*.swp

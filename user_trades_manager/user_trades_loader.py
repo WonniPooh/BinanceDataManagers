@@ -15,7 +15,7 @@ from typing import Any, Dict
 
 from .user_trades_db_manager import UserTradeDB
 
-logger = logging.getLogger("data_manager.user_trades_manager")
+logger = logging.getLogger("BinanceDataManagers.user_trades_manager")
 
 _QUERY_WINDOW_MS = 6 * 24 * 60 * 60 * 1000  # 6 days in ms
 

@@ -10,7 +10,7 @@ Hits mainnet Binance WS — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.trades_manager.tests.test_trades_ws_integration
+    python -m BinanceDataManagers.trades_manager.tests.test_trades_ws_integration
 """
 from __future__ import annotations
 
@@ -24,8 +24,8 @@ from pathlib import Path
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.trades_manager.trades_ws_stream import TradesWSStream
-from data_manager.trades_manager.trades_db_manager import AggTradeDB
+from BinanceDataManagers.trades_manager.trades_ws_stream import TradesWSStream
+from BinanceDataManagers.trades_manager.trades_db_manager import AggTradeDB
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

@@ -10,7 +10,7 @@ Hits mainnet Binance S3 + REST API — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.trades_manager.tests.test_trades_archive_integration
+    python -m BinanceDataManagers.trades_manager.tests.test_trades_archive_integration
 """
 from __future__ import annotations
 
@@ -27,13 +27,13 @@ import aiohttp
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.trades_manager.trades_archive_downloader import (
+from BinanceDataManagers.trades_manager.trades_archive_downloader import (
     process_symbol as archive_process_symbol,
     db_path_for_symbol,
 )
-from data_manager.trades_manager.trades_rest_downloader import fill_gap
-from data_manager.trades_manager.trades_db_manager import AggTradeDB
-from data_manager.binance_rate_limiter import bnx_limiter
+from BinanceDataManagers.trades_manager.trades_rest_downloader import fill_gap
+from BinanceDataManagers.trades_manager.trades_db_manager import AggTradeDB
+from BinanceDataManagers.binance_rate_limiter import bnx_limiter
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

@@ -4,11 +4,11 @@ Integration test — load 3 days of ADAUSDT klines and verify no gaps.
 Hits mainnet Binance (S3 archive + REST API) — NOT for CI.
 
 Usage:
-    cd data_manager/klines_manager
+    cd BinanceDataManagers/klines_manager
     python -m tests.test_klines_loader_integration
 
     # or from project root:
-    python -m data_manager.klines_manager.tests.test_klines_loader_integration
+    python -m BinanceDataManagers.klines_manager.tests.test_klines_loader_integration
 """
 from __future__ import annotations
 
@@ -19,15 +19,15 @@ import sys
 import time
 from pathlib import Path
 
-# Ensure data_manager is importable when run from various CWDs
+# Ensure BinanceDataManagers is importable when run from various CWDs
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.klines_manager.klines_loader import load_symbol, find_gaps
-from data_manager.klines_manager.klines_db_manager import CandleDB
-from data_manager.klines_manager.klines_archive_downloader import db_path_for_symbol
-from data_manager.klines_manager.klines_exchange_downloader import CANDLE_MS
-from data_manager.binance_rate_limiter import bnx_limiter
+from BinanceDataManagers.klines_manager.klines_loader import load_symbol, find_gaps
+from BinanceDataManagers.klines_manager.klines_db_manager import CandleDB
+from BinanceDataManagers.klines_manager.klines_archive_downloader import db_path_for_symbol
+from BinanceDataManagers.klines_manager.klines_exchange_downloader import CANDLE_MS
+from BinanceDataManagers.binance_rate_limiter import bnx_limiter
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

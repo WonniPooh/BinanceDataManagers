@@ -4,7 +4,7 @@ symbol with no gaps.
 
 Usage::
 
-    from data_manager.klines_manager.klines_loader import load_symbol
+    from BinanceDataManagers.klines_manager.klines_loader import load_symbol
 
     queue = asyncio.Queue()
     await load_symbol("ADAUSDT", lookback_days=7, db_root="db_files",

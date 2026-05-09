@@ -49,7 +49,7 @@ Hits mainnet Binance S3 + REST + WS — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.trades_manager.tests.test_trades_loader_integration
+    python -m BinanceDataManagers.trades_manager.tests.test_trades_loader_integration
 """
 from __future__ import annotations
 
@@ -66,9 +66,9 @@ import aiohttp
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.trades_manager.trades_loader import TradesLoader
-from data_manager.trades_manager.trades_db_manager import AggTradeDB
-from data_manager.binance_rate_limiter import bnx_limiter
+from BinanceDataManagers.trades_manager.trades_loader import TradesLoader
+from BinanceDataManagers.trades_manager.trades_db_manager import AggTradeDB
+from BinanceDataManagers.binance_rate_limiter import bnx_limiter
 
 UTC = timezone.utc
 BASE_DB_ROOT = _project_root / "logs" / "test_trades_loader_integration"

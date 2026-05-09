@@ -6,7 +6,7 @@ correct data is pruned. No network access — purely local DB operations.
 
 Usage:
     cd <project_root>
-    python -m data_manager.trades_manager.tests.test_trades_cleanup_integration
+    python -m BinanceDataManagers.trades_manager.tests.test_trades_cleanup_integration
 """
 from __future__ import annotations
 
@@ -20,8 +20,8 @@ from pathlib import Path
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.trades_manager.trades_db_manager import AggTradeDB
-from data_manager.trades_manager.trades_cleanup import (
+from BinanceDataManagers.trades_manager.trades_db_manager import AggTradeDB
+from BinanceDataManagers.trades_manager.trades_cleanup import (
     cleanup_common_db,
     cleanup_stale_historical_dbs,
     cleanup_all_symbols,

@@ -21,7 +21,7 @@ from typing import Any, Dict, List
 
 from .order_events_db_manager import OrderEventDB
 
-logger = logging.getLogger("data_manager.order_data_manager")
+logger = logging.getLogger("BinanceDataManagers.order_data_manager")
 
 _QUERY_WINDOW_MS = 6 * 24 * 60 * 60 * 1000  # 6 days in ms
 

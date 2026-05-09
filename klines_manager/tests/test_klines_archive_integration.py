@@ -11,7 +11,7 @@ Hits mainnet Binance S3 + REST API — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.klines_manager.tests.test_klines_archive_integration
+    python -m BinanceDataManagers.klines_manager.tests.test_klines_archive_integration
 """
 from __future__ import annotations
 
@@ -28,14 +28,14 @@ import aiohttp
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.klines_manager.klines_archive_downloader import (
+from BinanceDataManagers.klines_manager.klines_archive_downloader import (
     process_symbol as archive_process_symbol,
     db_path_for_symbol,
 )
-from data_manager.klines_manager.klines_loader import load_symbol, find_gaps
-from data_manager.klines_manager.klines_db_manager import CandleDB
-from data_manager.klines_manager.klines_exchange_downloader import CANDLE_MS
-from data_manager.binance_rate_limiter import bnx_limiter
+from BinanceDataManagers.klines_manager.klines_loader import load_symbol, find_gaps
+from BinanceDataManagers.klines_manager.klines_db_manager import CandleDB
+from BinanceDataManagers.klines_manager.klines_exchange_downloader import CANDLE_MS
+from BinanceDataManagers.binance_rate_limiter import bnx_limiter
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

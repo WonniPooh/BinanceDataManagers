@@ -9,7 +9,7 @@ Hits mainnet Binance WS — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.klines_manager.tests.test_klines_ws_integration
+    python -m BinanceDataManagers.klines_manager.tests.test_klines_ws_integration
 """
 from __future__ import annotations
 
@@ -23,8 +23,8 @@ from pathlib import Path
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.klines_manager.klines_ws_stream import KlineStream
-from data_manager.klines_manager.klines_db_manager import CandleDB
+from BinanceDataManagers.klines_manager.klines_ws_stream import KlineStream
+from BinanceDataManagers.klines_manager.klines_db_manager import CandleDB
 
 # ── Config ────────────────────────────────────────────────────────────────────
 

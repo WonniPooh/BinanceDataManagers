@@ -8,7 +8,7 @@ Hits mainnet Binance REST API — NOT for CI.
 
 Usage:
     cd <project_root>
-    python -m data_manager.trades_manager.tests.test_trades_rest_integration
+    python -m BinanceDataManagers.trades_manager.tests.test_trades_rest_integration
 """
 from __future__ import annotations
 
@@ -22,9 +22,9 @@ from pathlib import Path
 _project_root = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(_project_root))
 
-from data_manager.trades_manager.trades_rest_downloader import fill_gap_for_symbol
-from data_manager.trades_manager.trades_db_manager import AggTradeDB
-from data_manager.binance_rate_limiter import bnx_limiter
+from BinanceDataManagers.trades_manager.trades_rest_downloader import fill_gap_for_symbol
+from BinanceDataManagers.trades_manager.trades_db_manager import AggTradeDB
+from BinanceDataManagers.binance_rate_limiter import bnx_limiter
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
